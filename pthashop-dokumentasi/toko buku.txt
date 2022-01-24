@@ -1,0 +1,46 @@
+Toko games : 
+-pembeli games
+-produk games
+
+Install backend :
+-express
+-cors
+-body-panser
+-mysql
+
+Npm I -g nodemon
+Nodemon -v
+
+Cara Buat Backend
+-Buat folder
+-Buka visual studio code
+-Buka git bash
+-Npm init -y
+-Package json
+-Npm I express body -panser mysql cors
+
+Database
+1. Pembeli Buku
+-Id – int
+-Nomer anggota – string
+-Nama – string
+-Username – string
+-Password – string
+-Created – tanggal
+-Update – tanggal
+
+2. Produk Buku
+Nama tabel product
+-Id – int 
+-Nomer produk – string 
+-Judul buku – string 
+-Halaman – string 
+-Genre – string 
+-Tahun – string 
+-Penerbit – string 
+-Pengarang – string 
+-Isbn – string 
+-Harga – string 
+-diskon – string
+-Created – tanggal
+-Update – tanggal
