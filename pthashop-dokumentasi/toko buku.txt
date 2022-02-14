@@ -19,28 +19,44 @@ Cara Buat Backend
 -Package json
 -Npm I express body -panser mysql cors
 
-Database
-1. Pembeli Buku
--Id – int
--Nomer anggota – string
--Nama – string
--Username – string
--Password – string
--Created – tanggal
--Update – tanggal
+DATABASE 
+========
 
-2. Produk Buku
-Nama tabel product
--Id – int 
--Nomer produk – string 
--Judul buku – string 
--Halaman – string 
--Genre – string 
--Tahun – string 
--Penerbit – string 
--Pengarang – string 
--Isbn – string 
--Harga – string 
--diskon – string
--Created – tanggal
--Update – tanggal
+1. Nyalakan XAMPP
+2. Masuk ke dalam PHPMyAdmin
+3. Buat database: namatoko_db
+4. Atur Privileges untuk membuat User 
+5. Buat user account baru
+6. Buat nama user dan password
+7. Masuk ke database lalu membuat tabel sesuai keperluan
+
+TABEL DATABASE
+==============
+
+1. User/Pembeli
+	nama tabel : user
+	query	   : 
+		- id INT NOT NULL AUTO_INCREMENT Primary Key
+		- username VARCHAR(255) NOT NULL
+		- email VARCHAR(255) NOT NULL
+		- password VARCHAR(255) NOT NULL
+		- name VARCHAR(255) 
+		- role VARCHAR(255)
+		- created_at TIMESTAMP
+		- updated_at TIMESTAMP
+	
+2. Book/Collection/Koleksi Buku
+	nama tabel : book
+	query	   :
+		- book_id INT NOT NULL AUTO_INCREMENT Primary Key
+		- book_label VARCHAR(255) NOT NULL
+		- book_title VARCHAR(255) NOT NULL
+		- book_author VARCHAR(255) NOT NULL
+		- book_genre VARCHAR(255) 
+		- book_publisher VARCHAR(255)
+		- book_isbn VARCHAR(255)
+		- book_year VARCHAR(255)
+		- book_price INT
+		- book_stock INT
+		- created_at TIMESTAMP
+		- updated_at TIMESTAMP
