@@ -1,31 +1,37 @@
-'use strict'
+/**
+ * Express Init
+ * Setting port
+ * Cors init
+ * Dotenv Init
+ * Body Parser
+ */
 
-// Init Env
+// Initializition dotenv
 require('dotenv').config();
 
-// Init Express
-const express = require('express');
+// Initializition Libraries
+const express = require('express')
 const app = express();
-
-// Init other modules
-const bodyParser = require('body-parser');
 const cors = require('cors');
+const bodyParser = require('body-parser');
 
-// Init PORT
-const PORT = process.env.PORT || 3000;
+// Import Router
+const {router} = require('./router/router');
+const {bookRouter} = require('./router/BookRouter');
 
-// Cors Setup
+// Initializition PORT
+const port = process.env.PORT || 3000;
+
+// Cors Option Origin
 let originOptionCors = {
-    origin: `http://localhost:${PORT}`
+    origin: `http://localhost:${port}`
 }
 
 app.use(cors(originOptionCors));
 
 // Routing
-
-app.get('/', function(req,res) {
-    res.send('hello world');
-})
+app.use('/', router);
+app.use('/books', bookRouter);
 
 // Port Connection
-app.listen(PORT, () => `connect to server on port ${PORT}`)
+app.listen(port, () => `connect to server on port ${port}`)
