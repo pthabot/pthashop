@@ -11,9 +11,14 @@ const router = express.Router();
 // Controller
 const { Controller } = require('../controller/Controller')
 
+const {bookRouter} = require('./BookRouter');
+
+
+
 // Endpoint : Home
 router.get('/', Controller.Homepage);
 
+router.use('/books', bookRouter);
 
 // export module
 module.exports = { router };
