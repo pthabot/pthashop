@@ -23,5 +23,5 @@ class BookController {
 }
 
 module.exports = {
-    BookController
+    BookController,
 };
