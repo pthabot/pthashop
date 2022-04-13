@@ -6,15 +6,13 @@
  * Add Model to Controller
  */
 
-const {
-    Book
-} = require('../model/Book');
+const { Book } = require('../model/Book');
 
 class BookController {
     static FindAllBooks(req, res) {
         Book.showAllBooks((err, data) => {
             if (err) {
-                console.log('Controller error');
+                console.log('Controller erro', err);
             } else {
                 console.log('data', data);
             }
@@ -23,5 +21,5 @@ class BookController {
 }
 
 module.exports = {
-    BookController,
+    BookController
 };
